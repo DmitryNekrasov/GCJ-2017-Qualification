@@ -13,7 +13,7 @@ fun main(args: Array<String>) {
 fun solve(br: BufferedReader, pw: PrintWriter) {
     val testCount = br.readLine().toInt()
     for (test in 1..testCount) {
-        val a = br.readLine()!!.map(Char::toString).map(String::toLong).toLongArray()
+        val a = br.readLine().map(Char::toString).map(String::toLong).toLongArray()
 
         var nine = a.size
         for (i in a.lastIndex downTo 1) {
