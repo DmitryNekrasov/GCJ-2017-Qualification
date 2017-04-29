@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
 fun solve(br: BufferedReader, pw: PrintWriter) {
     val testCount = br.readLine().toInt()
     for (test in 1..testCount) {
-        val a = br.readLine().map(Char::toString).map(String::toLong).toLongArray()
+        val a = br.readLine().map(Char::toString).map(String::toInt).toIntArray()
 
         var nine = a.size
         for (i in a.lastIndex downTo 1) {
@@ -29,7 +29,7 @@ fun solve(br: BufferedReader, pw: PrintWriter) {
             a[i] = 9
         }
 
-        val ans = a.map(Long::toString).fold("") { a, b -> a + b }.toLong()
+        val ans = a.map(Int::toString).fold("") { a, b -> a + b }.toLong()
         pw.println("Case #$test: $ans")
     }
 }
